@@ -1,0 +1,153 @@
+/*
+font-family: 'Raleway', sans-serif;
+sidebarBg --> #e6e6e6
+dropShadow --> rgba(0,0,0,0.5)
+pseudoElementBg --> Tomato
+textColor --> #333 @ 0.5 opacity
+Pale blue: hsl(225, 100%, 94%)
+Bright blue: hsl(245, 75%, 52%)
+Very pale blue: hsl(225, 100%, 98%)
+Desaturated blue: hsl(224, 23%, 55%)
+Dark blue: hsl(223, 47%, 23%)
+Font size (paragraph): 16px
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: hsl(225, 100%, 94%);
+  background-image: url(https://cdn.glitch.me/581ba4a0-d31b-46c4-8bc1-b11541387b47/pattern-background-desktop.svg?v=1640972679903);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 25vw;
+  height: 80vh;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 15px 15px 3px hsla(241, 87%, 56%, 0.1);
+  min-width: 350px;
+}
+
+header {
+  height: 33%;
+  background-image: url(https://cdn.glitch.me/581ba4a0-d31b-46c4-8bc1-b11541387b47/illustration-hero.svg?v=1640972677429);
+  background-size: cover;
+}
+
+.body {
+  height: 66%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.title {
+  color: hsl(223, 47%, 23%);
+  padding-top: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.desc {
+  color: hsl(224, 23%, 55%);
+  width: 30ch;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.change-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 20%;
+  border-radius: 0.5rem;
+  background: hsl(225, 100%, 98%);
+  padding: 20px;
+  position: relative;
+}
+
+.plan-text {
+  position: absolute;
+  left: 85px;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  gap: 7px;
+}
+
+.payment {
+  color: white;
+  background: hsl(245, 75%, 52%);
+  border: none;
+  width: 80%;
+  height: 13%;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 20px 5px hsla(241, 100%, 60%, 0.2);
+}
+
+.plan {
+  font-weight: 700;
+}
+
+.price {
+  color: hsl(224, 23%, 55%);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+}
+
+.change {
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.cancel {
+  color: hsl(224, 23%, 55%);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.payment:hover {
+  background: hsl(245, 80%, 67%);
+}
+
+.change:hover {
+  color: hsl(245, 80%, 67%);
+}
+
+.cancel:hover {
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url(https://cdn.glitch.me/581ba4a0-d31b-46c4-8bc1-b11541387b47/pattern-background-mobile.svg?v=1640972683227);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .container {
+    width: 350px;
+  }
+  .desc {
+    width: 25ch;
+  }
+}
